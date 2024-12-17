@@ -73,3 +73,32 @@ sizeButtonIds.forEach((id) => {
     .getElementById(id)
     .addEventListener("click", () => handleSizeButtonClick(id));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Select the relevant elements
+  const quantityInput = document.getElementById("quantity-input");
+  const increaseBtn = document.getElementById("increase-btn");
+  const decreaseBtn = document.getElementById("decrease-btn");
+
+  // Function to log the current value
+  function logCurrentValue() {
+    console.log("Current Quantity:", quantityInput.value);
+  }
+
+  // Handle "+" button click
+  increaseBtn.addEventListener("click", () => {
+    quantityInput.stepUp(); // Increase input value
+    logCurrentValue();
+  });
+
+  // Handle "-" button click
+  decreaseBtn.addEventListener("click", () => {
+    quantityInput.stepDown(); // Decrease input value
+    logCurrentValue();
+  });
+
+  // Handle manual input changes
+  quantityInput.addEventListener("input", () => {
+    logCurrentValue();
+  });
+});

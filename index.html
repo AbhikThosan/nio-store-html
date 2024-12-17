@@ -172,13 +172,14 @@
                 class="flex items-center justify-center w-[130px] h-[36px] ring-1 ring-[#DBDFEA] rounded-[4px]"
               >
                 <button
-                  onclick="this.parentNode.querySelector('input').stepDown()"
+                  id="decrease-btn"
                   class="w-[35px] h-[36px] text-gray-600 hover:bg-gray-100 border-r border-gray-300 focus:outline-none"
                 >
                   −
                 </button>
 
                 <input
+                  id="quantity-input"
                   type="number"
                   value="1"
                   min="1"
@@ -186,7 +187,7 @@
                 />
 
                 <button
-                  onclick="this.parentNode.querySelector('input').stepUp()"
+                  id="increase-btn"
                   class="w-[35px] h-[36px] text-gray-600 hover:bg-gray-100 border-l border-gray-300 focus:outline-none"
                 >
                   +
@@ -202,7 +203,9 @@
                 </button>
               </div>
               <div>
-                <i class="far fa-heart text-2xl"></i>
+                <button>
+                  <i class="far fa-heart text-2xl"></i>
+                </button>
               </div>
             </div>
           </div>
