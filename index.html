@@ -19,48 +19,60 @@
     <script src="https://unpkg.com/@heroicons/24@2.1.1/24/solid/index.min.js"></script>
   </head>
   <body>
-    <div class="flex items-center justify-center 2xl:gap-[60px] mt-[120px]">
-      <div class="">
+    <div
+      class="flex flex-col lg:flex-row items-center justify-center lg:gap-[30px] xl:gap-[40px] 2xl:gap-[60px] mt-[60px] md:mt-[120px] px-4 md:px-6"
+    >
+      <div class="w-full md:w-auto mb-8 md:mb-0">
         <img
           src="./assets/images/watch-1-violet.png"
           alt="smart watch"
-          class="block 2xl:h-[720px]"
+          class="block w-full md:w-auto md:h-[480px] lg:h-[600px] 2xl:h-[720px] transition-opacity duration-500 opacity-100 mx-auto"
+          id="product-image"
         />
       </div>
-      <div class="2xl:w-[690px]">
-        <div class="2xl:w-[539px] border-red-100">
-          <h3 class="text-[40px] font-[700] mb-[15px]">
+      <div
+        class="w-full md:w-[500px] lg:w-[600px] 2xl:w-[690px] md:flex md:flex-col md:justify-center md:items-center"
+      >
+        <div class="w-full md:w-[400px] lg:w-[500px] 2xl:w-[539px]">
+          <h3
+            class="text-[28px] md:text-[32px] lg:text-[36px] 2xl:text-[40px] font-[700] mb-[15px]"
+          >
             Classy Modern Smart Watch
           </h3>
           <div class="flex gap-2 mb-[28px]">
-            <div class="flex gap-2 text-[#facc15] text-[18px]">
+            <div class="flex gap-2 text-[#facc15] text-[16px] md:text-[18px]">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half-alt"></i>
               <i class="far fa-star"></i>
             </div>
-            <div class="text-[14px] text-[#8091A7]">
+            <div class="text-[12px] md:text-[14px] text-[#8091A7]">
               (<span>2</span> <span>Reviews</span>)
             </div>
           </div>
+          <!-- Price Section -->
           <div class="mb-[20px]">
             <span
-              class="mr-[5px] text-[20px] font-[400] line-through text-[#8091A7]"
-              >$99.00</span
-            ><span class="text-[24px] font-[700] text-brand-voilet"
-              >$79.00</span
-            >
+              id="original-price"
+              class="mr-[5px] text-[18px] md:text-[20px] font-[400] line-through text-[#8091A7]"
+            ></span>
+            <span
+              id="discount-price"
+              class="text-[20px] md:text-[24px] font-[700] text-brand-violet"
+            ></span>
           </div>
           <p
-            class="text-[18px] font-[400] text-[#8091A7] leading-[30px] mb-[20px]"
+            class="text-[16px] md:text-[18px] font-[400] text-[#8091A7] leading-[26px] md:leading-[30px] mb-[20px]"
           >
             I must explain to you how all this mistaken idea of denoun cing ple
             praising pain was born and I will give you a complete account of the
             system, and expound the actual teaching.
           </p>
 
-          <div class="flex gap-[43px] mb-[20px]">
+          <div
+            class="flex flex-col md:flex-row gap-[20px] md:gap-[43px] mb-[20px]"
+          >
             <div class="leading-[23px]">
               <p class="text-left text-[14px] font-[400] text-[#8091A7]">
                 Type
@@ -84,13 +96,13 @@
               <p class="text-[16px] font-[700] text-[#364A63] mb-[10px]">
                 Brand Color
               </p>
-              <div class="flex items-center gap-[12px]">
+              <div class="flex items-center gap-[12px] flex-wrap">
                 <button id="brand-violet">
                   <div
-                    class="flex items-center justify-center h-[24px] w-[24px] rounded-full ring-brand-voilet"
+                    class="flex items-center justify-center h-[24px] w-[24px] rounded-full ring-brand-violet"
                   >
                     <div
-                      class="h-[16px] w-[16px] rounded-full bg-brand-voilet"
+                      class="h-[16px] w-[16px] rounded-full bg-brand-violet"
                     ></div>
                   </div>
                 </button>
@@ -131,43 +143,15 @@
               <p class="text-[16px] font-[700] text-[#364A63] mb-[10px]">
                 Wrist Size
               </p>
-              <div class="flex items-center gap-[12px]">
-                <button
-                  class="text-[13px] px-[18px] py-[8px] ring-1 ring-[#6576FF] rounded-[3px]"
-                  type="button"
-                  id="size-s"
-                >
-                  <span class="text-[#364A63] font-[700] mr-[4px]">S</span>
-                  <span class="text-[#8091A7] font-[400]">$69</span>
-                </button>
-                <button
-                  class="text-[13px] px-[18px] py-[8px] ring-1 ring-[#DBDFEA] rounded-[3px]"
-                  type="button"
-                  id="size-m"
-                >
-                  <span class="text-[#364A63] font-[700] mr-[4px]">M</span>
-                  <span class="text-[#8091A7] font-[400]">$79</span>
-                </button>
-                <button
-                  class="text-[13px] px-[18px] py-[8px] ring-1 ring-[#DBDFEA] rounded-[3px]"
-                  type="button"
-                  id="size-l"
-                >
-                  <span class="text-[#364A63] font-[700] mr-[4px]">L</span>
-                  <span class="text-[#8091A7] font-[400]">$89</span>
-                </button>
-                <button
-                  class="text-[13px] px-[18px] py-[8px] ring-1 ring-[#DBDFEA] rounded-[3px]"
-                  type="button"
-                  id="size-xl"
-                >
-                  <span class="text-[#364A63] font-[700] mr-[4px]">XL</span>
-                  <span class="text-[#8091A7] font-[400]">$99</span>
-                </button>
+              <div
+                id="size-buttons"
+                class="flex items-center gap-[12px] flex-wrap"
+              >
+                <!-- Size buttons will be injected here by script.js -->
               </div>
             </div>
 
-            <div class="flex items-center gap-[12px]">
+            <div class="flex items-center gap-[12px] flex-wrap">
               <div
                 class="flex items-center justify-center w-[130px] h-[36px] ring-1 ring-[#DBDFEA] rounded-[4px]"
               >
@@ -198,12 +182,13 @@
                 <button
                   type="submit"
                   class="text-[13px] font-[700] text-white bg-[#6576FF] rounded-[3px] py-[8px] px-[18px]"
+                  id="add-to-cart"
                 >
                   Add to Cart
                 </button>
               </div>
               <div>
-                <button>
+                <button id="favorite">
                   <i class="far fa-heart text-2xl"></i>
                 </button>
               </div>
@@ -213,14 +198,75 @@
       </div>
     </div>
     <div
-      class="text-[#364A63] text-center mt-[112px] font-[700] text-[14px] mb-[20px]"
+      class="text-[#364A63] text-center mt-[60px] md:mt-[112px] font-[700] text-[14px] mb-[20px] sticky top-0"
     >
-      <button class="bg-[#FFBB5A] px-[24px] py-[8px] rounded-[20px]">
+      <button
+        class="bg-[#FFBB5A] px-[24px] py-[8px] rounded-[20px]"
+        id="checkout"
+      >
         Checkout
-        <span class="bg-white ml-[10px] px-[6px] py-[2px] rounded-[5px]"
-          >2</span
+        <span
+          class="bg-white ml-[10px] px-[6px] py-[2px] rounded-[5px]"
+          id="cart-items-count"
+          >0</span
         >
       </button>
+
+      <!-- cart modal -->
+      <div
+        id="cart-modal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4"
+      >
+        <div
+          class="bg-white w-[90%] max-w-[650px] max-h-[90vh] overflow-y-auto rounded-lg p-4 md:p-[44px] shadow-lg"
+        >
+          <h2 class="w-full text-left text-xl font-bold mb-4">Your Cart</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse min-w-[500px]">
+              <thead>
+                <tr class="text-[#8091A7] text-[14px] font-[400] border-b">
+                  <th class="text-[#8091A7] py-2 text-[14px] font-[400]">
+                    Item
+                  </th>
+                  <th class="">Color</th>
+                  <th class="text-[#8091A7] py-2 text-[14px] font-[400]">
+                    Size
+                  </th>
+                  <th class="text-[#8091A7] py-2 text-[14px] font-[400]">
+                    Qnt
+                  </th>
+                  <th
+                    class="text-[#8091A7] py-2 text-[14px] font-[400] text-right"
+                  >
+                    Price
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="cart-items-list"></tbody>
+            </table>
+          </div>
+          <div
+            class="flex justify-between items-center mt-4 text-lg font-semibold"
+          >
+            <span>Total</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <div class="flex justify-end mt-6 gap-4 flex-wrap">
+            <button
+              id="continue-shopping"
+              class="px-4 py-2 bg-gray-200 text-gray-800 rounded"
+            >
+              Continue Shopping
+            </button>
+            <button
+              id="checkoutProceed"
+              class="px-4 py-2 bg-[#6576FF] text-white rounded"
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
